@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>im bored. this title wont appear the graphic by the way </title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0d0d0d;
+    overflow: hidden;
+    font-family: monospace;
+  }
+
+  .canvas {
+    position: relative;
+    width: 90vmin;
+    height: 90vmin;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    gap: 2px;
+  }
+
+  .cell {
+    background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px rgba(255,255,255,0.05);
+    transition: transform 0.3s;
+  }
+
+  .cell::before {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    top: -25%;
+    left: -25%;
+    background: repeating-linear-gradient(
+      45deg,
+      rgba(255,255,255,0.02),
+      rgba(255,255,255,0.02) 2px,
+      transparent 2px,
+      transparent 6px
+    );
+    transform: rotate(0deg);
+  }
+
+  .cell:nth-child(odd)::before {
+    transform: rotate(45deg);
+  }
+
+  .cell:hover {
+    transform: scale(1.2) rotate(5deg);
+    box-shadow: inset 0 0 15px rgba(255,255,255,0.2), 0 0 10px rgba(255,255,255,0.1);
+  }
+
+  .highlight {
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    background: rgba(255,0,150,0.3);
+    top: 40%;
+    left: 40%;
+    transform: rotate(-15deg);
+    border-radius: 3px;
+  }
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="cell"><div class="highlight"></div></div>
+    <div class="cell"></div>
+    <div class="cell"><div class="highlight"></div></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"><div class="highlight"></div></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"><div class="highlight"></div></div>
+    <div class="cell"></div>
+    
+    <div class="cell"></div>
+    <div class="cell"><div class="highlight"></div></div>
+    <div class="cell"></div>
+    <div class="cell"><div class="highlight"></div></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"><div class="highlight"></div></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"><div class="highlight"></div></div>
+    
+    <div class="cell"><div class="highlight"></div></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"><div class="highlight"></div></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"><div class="highlight"></div></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"><div class="highlight"></div></div>
+    
+    <div class="cell"></div>
+    <div class="cell"><div class="highlight"></div></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"><div class="highlight"></div></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"><div class="highlight"></div></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+
+    <div class="cell"><div class="highlight"></div></div>
+    <div class="cell"></div>
+    <div class="cell"><div class="highlight"></div></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"><div class="highlight"></div></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"><div class="highlight"></div></div>
+    <div class="cell"></div>
+
+    <div class="cell"></div>
+    <div class="cell"><div class="highlight"></div></div>
+    <div class="cell"></div>
+    <div class="cell"><div class="highlight"></div></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"><div class="highlight"></div></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"><div class="highlight"></div></div>
+
+    <div class="cell"><div class="highlight"></div></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"><div class="highlight"></div></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"><div class="highlight"></div></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"><div class="highlight"></div></div>
+
+    <div class="cell"></div>
+    <div class="cell"><div class="highlight"></div></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"><div class="highlight"></div></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"><div class="highlight"></div></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+
+    <div class="cell"><div class="highlight"></div></div>
+    <div class="cell"></div>
+    <div class="cell"><div class="highlight"></div></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"><div class="highlight"></div></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"><div class="highlight"></div></div>
+    <div class="cell"></div>
+
+    <div class="cell"></div>
+    <div class="cell"><div class="highlight"></div></div>
+    <div class="cell"></div>
+    <div class="cell"><div class="highlight"></div></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"><div class="highlight"></div></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"><div class="highlight"></div></div>
+  </div>
+</body>
+</html>
